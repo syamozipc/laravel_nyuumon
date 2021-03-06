@@ -15,6 +15,6 @@
 <body>
     <h1>Index</h1>
     <p><?= $msg; ?></p>
-    <p><?= date("Y年n月j日"); ?></p>
+    <p>ID=<?= $id; ?></p>
 </body>
 </html>

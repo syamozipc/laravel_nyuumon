@@ -13,33 +13,33 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	return view('welcome');
 });
 
 Route::get('hi', function () {
-    return '<html><body><h1>Hi!!</h1><p>This is sample page</p></body></html>';
+	return '<html><body><h1>Hi!!</h1><p>This is sample page</p></body></html>';
 });
 
 Route::get('hola/{msg}/{comment?}', function ($msg, $comment="default") {
 
-    $html = <<<EOF
-        <html>
-        <head>
-        <title>hola</title>
-        <style>
-        body {font-size:16pt; color:#999;}
-        h1 {font-size:100pt; text-align:right; color:#eee; margin:-40px 0px -50px 0px}
-        </style>
-        </head>
-        <body>
-            <h1>hola</h1>
-            <p>{$msg}</p>
-            <p>サンプルページ{$comment}</p>
-        </body>
-        </html>
-        EOF;
+	$html = <<<EOF
+		<html>
+		<head>
+		<title>hola</title>
+		<style>
+		body {font-size:16pt; color:#999;}
+		h1 {font-size:100pt; text-align:right; color:#eee; margin:-40px 0px -50px 0px}
+		</style>
+		</head>
+		<body>
+			<h1>hola</h1>
+			<p>{$msg}</p>
+			<p>サンプルページ{$comment}</p>
+		</body>
+		</html>
+		EOF;
 
-    return $html;
+	return $html;
 });
 
 // Route::get('hello', function () {
@@ -47,3 +47,4 @@ Route::get('hola/{msg}/{comment?}', function ($msg, $comment="default") {
 // });
 
 Route::get('hello', 'HelloController@index');
+Route::post('hello', 'HelloController@post');
