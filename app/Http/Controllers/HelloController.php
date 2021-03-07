@@ -9,14 +9,8 @@ class HelloController extends Controller
 {
 	public function index(Request $request)
 	{
-		$collection = [
-            ['name' => '山田', 'mail' => 'yamada@abc.com'],
-            ['name' => '斎藤', 'mail' => 'saito@abc.com'],
-            ['name' => '田中', 'mail' => 'tanaka@abc.com'],
-		];
-
         $data = [
-            'collection' => $collection,
+            'message' => 'hello'
         ];
 
 		return view('hello.index', $data);
