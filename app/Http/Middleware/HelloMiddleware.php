@@ -16,6 +16,13 @@ class HelloMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        return $next($request);
+        $response = $next($request);
+        $content = $response->content();
+
+        $pattern = '/<middleware>(.*)<\/middleware>/i';
+        $replace = '<a href="http://$1" target="_brank" rel="noopener">$1</a>';
+        $content = preg_replace($pattern, $replace, $content);
+        $response->setContent($content);
+        return $response;
     }
 }

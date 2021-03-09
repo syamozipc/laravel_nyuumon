@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\HelloMiddleware;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -46,5 +47,6 @@ Route::get('hola/{msg}/{comment?}', function ($msg, $comment="default") {
 //     return view('hello.index');
 // });
 
-Route::get('hello', 'HelloController@index');
+Route::get('hello', 'HelloController@index')
+    ->middleware('hello');
 Route::post('hello', 'HelloController@post');
