@@ -13,6 +13,8 @@
 		.menutitle {font-size: 14pt; font-weight: bold; margin: 0;}
 		.content {margin: 10px;}
 		.footer {text-align: right; font-size: 10pt; margin: 10px; border-bottom: solid 1px #ccc; color: #ccc;}
+        th {background: #999; color: #fff; padding: 5px 10px;}
+        td {border: solid 1px #aaa; color: #999; padding: 5px 10px;}
 	</style>
 </head>
 <body>
