@@ -18,6 +18,8 @@ class PeopleTableSeeder extends Seeder
             'name' => 'taro',
             'mail' => 'taro@yamada.jp',
             'age'  => 12,
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
         DB::table('people')->insert($param);
 
@@ -25,6 +27,8 @@ class PeopleTableSeeder extends Seeder
             'name' => 'hanako',
             'mail' => 'hanako@flower.jp',
             'age'  => 34,
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
         DB::table('people')->insert($param);
 
@@ -32,6 +36,8 @@ class PeopleTableSeeder extends Seeder
             'name' => 'sachiko',
             'mail' => 'sachiko@happy.jp',
             'age'  => 56,
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
         DB::table('people')->insert($param);
     }
