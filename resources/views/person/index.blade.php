@@ -13,23 +13,33 @@
             <th>person</th>
             <th>board</th>
         </tr>
-        @foreach ($items as $item)
+        @foreach ($hasItems as $item)
             <tr>
                 <td>{{$item->getData()}}</td>
                 <td>
-                    @if ($item->boards != null)
-                        <table width="100%">
-                            @foreach ($item->boards as $obj)
-                                <tr>
-                                    <td>{{$obj->data}}</td>
-                                </tr>
-                            @endforeach
-                        </table>
-                    @endif
+                    <table width="100%">
+                        @foreach ($item->boards as $obj)
+                            <tr>
+                                <td>{{$obj->data}}</td>
+                            </tr>
+                        @endforeach
+                    </table>
                 </td>
             </tr>
         @endforeach
     </table>
+    <div style="margin: 10px;">
+        <table>
+            <tr>
+                <th>person</th>
+            </tr>
+            @foreach ($noItems as $item)
+                <tr>
+                    <td>{{$item->getData()}}</td>
+                </tr>
+            @endforeach
+        </table>
+    </div>
 @endsection
 
 @section('footer')

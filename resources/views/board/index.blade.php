@@ -10,12 +10,14 @@
 @section('content')
     <table>
         <tr>
-            <th>Data</th>
+            <th>message</th>
+            <th>name</th>
         </tr>
         @foreach ($items as $item)
-        <tr>
-            <td>{{$item->data}}</td>
-        </tr>
+            <tr>
+                <td>{{$item->message}}</td>
+                <td>{{$item->person->name}}</td>
+            </tr>
         @endforeach
     </table>
 @endsection
